@@ -20,6 +20,14 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+			.two-columns {
+				display: flex;
+				flex-direction: column;
+				flex-flow: row;
+				justify-content: space-around;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -27,9 +35,64 @@
 				<section>
 					<h4>fullstackdevelopment.de</h4>
 					<h3>Der Weg zum Full-Stack-Developer</h3>
-					<p></p>
+					<img src="img/Profilfoto.JPG" width="200px"/>
 				</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h3>Was bedeutet Full-Stack?</h3>
+					<div class="two-columns">
+						<div>
+							<h5>Front-End</h5>
+							<ul>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+								<li>...</li>
+							</ul>
+						</div>
+						<div>
+							<h5>Back-End</h5>
+							<ul>
+								<li>Businesslogik</li>
+								<li>Datenbank</li>
+								<li>Versionskontrolle</li>
+								<li>Build-Tool</li>
+								<li>Unit-Tests</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Beispiele von Stacks</h3>
+					<ul>
+						<li><strong>LAMP</strong> - Linux, Apache, MySQL, PHP</li>
+						<li><strong>MEAN</strong> - MongoDB, ExpressJS, AngularJS, NodeJS</li>
+						<li><strong>Django</strong> - Python Web Framework</li>
+						<li><strong>Ruby on Rails</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Play Framework</h3>
+					<p>
+						<a href="https://www.playframework.com/" target="_blank">
+							<img src="https://www.playframework.com/assets/images/logos/e48e23590262d1b8f97257485c866c26-play_reverse.png" width="300px"/>
+						</a>
+					</p>
+				</section>
+
+				<section>
+					<h3>Scala</h3>
+					<p>
+						Scala kombiniert objetorientierte und funktionale Programmierung auf der Java-Virtual-Machine
+					</p>
+					<p>
+						<a href="https://www.scala-lang.org/">
+							<img src="https://www.scala-lang.org/resources/img/frontpage/scala-logo-white@2x.png">
+						</a>
+					</p>
+				</section>
 			</div>
 		</div>
 
@@ -46,7 +109,15 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				hash: true
 			});
 		</script>
 	</body>
