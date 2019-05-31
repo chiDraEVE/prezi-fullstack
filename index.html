@@ -36,6 +36,15 @@
 					<h4>fullstackdevelopment.de</h4>
 					<h3>Der Weg zum Full-Stack-Developer</h3>
 					<img src="img/ProfilfotoSmall.JPG" width="300" alt="Profilfoto" />
+
+					<aside class="notes">
+						<p>Herzlich willkommen zum ersten Video von fullstackdevelopment.de. Auf diesem Kanal geht es
+								  um das Thema Full-Stack-Development und möchte sich sowohl an erfahrene
+							Programmierer sowie Programmieranfänger. Viele Kollegen behaupten Anfänger sollten lieber
+							erst mal eine Programmiersprache beherrschen und sich dann erst an fortgeschrittene
+							Themen wagen, das sehe ich aber nicht so. Auf diesem Kanal jedoch sollen Anfänger sämtliche Grundlagen finden und weitestgehend früh an das Thema herangeführt werden. Fortgeschrittene dagegen überspringen einfach die Grundlagen.
+						</p>
+					</aside>
 				</section>
 
 				<section id="intro">
@@ -51,17 +60,106 @@
 									<li>...</li>
 								</ul>
 							</div>
-							<div>
-								<h5>Back-End</h5>
+							<div class="two-columns">
+								<div><h5>Back-End</h5>
 								<ul>
-									<li>Java</li>
-									<li>MySQL</li>
-									<li>Maven</li>
-									<li>Spring MVC</li>
+									<li>Scala</li>
+									<li>SBT</li>
+									<li>PlayFramework</li>
 									<li>...</li>
 								</ul>
+								</div>
+								<div>
+								<h5>Datenbank</h5>
+								<ul>
+									<li>MySQL</li>
+									<li>...</li>
+								</ul>
+								</div>
 							</div>
 						</div>
+
+						<aside class="notes">
+							<p>
+								Ein Full-Stack-Developer ist nicht klar definiert, ist jedoch ein aktuelles Buzzword. In
+								der Regel meint man damit einen Webentwickler, der sowohl Frontend als auch Backend
+								entwickelt. Dabei spricht man beim Frontend über all das, was im Browser
+								passiert, und beim Backend, was auf dem Server passiert. Bisher hat man Aufgaben
+								in diesen Bereichen auf
+								unterschiedliche Personen
+								verteilt. Im Backend teilweise sogar die Entwicklung auf der Datenbank auf einen oder
+								mehreren Entwickler verteilt.
+							</p>
+							<p>
+								Jetzt seht ihr auf der Folie noch ein paar Punkte stehen, mit denen
+								Programmierneulinge erst mal gar nichts anfangen können. Andere YouTube-Videos zu
+								Full-Stack-Development zeigen oft "Die und die Technologien müsst ihr lernen, um
+								Full-Stack-Developer zu sein". Meine Punkte sind auch nur ein Beispiel eines
+								Full-Stacks. Da gibt es ganz viele Möglichkeiten.
+							</p>
+							<p>
+								Damit ihr aber ein besseres Bild davon habt, was Frontend und Backend ist, erkläre
+								ich das an einem kleinen Beispiel.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>Play Framework</h3>
+						<p>
+							<a href="https://www.playframework.com/" target="_blank">
+								<img alt="PlayFramework" src="https://www.playframework.com/assets/images/logos/e48e23590262d1b8f97257485c866c26-play_reverse.png" width="300px"/>
+							</a>
+						</p>
+
+						<aside class="notes">
+							<p>
+								Dazu habe ich aus einem Buch ein kleines Tutorial aus einem Buch über das
+								PlayFramework implementiert.
+							</p>
+							<ul>
+								<li>Play ist cool und ist eine Framework, dass ich für meine Abschlussarbeit
+									benutzt habe</li>
+								<li>Was ein Framework ist, werde ich jetzt nicht im Detail erklären, da dieses Video
+									ja nur eine Einführung ist.<br>
+									Zusammengefasst und extrem simpel formuliert, ist ein Framework eine fertige
+									Struktur mit jeder Menge vordefiniertem Code, das einem Programmierer viel Arbeit
+									abnimmt.
+								</li>
+							</ul>
+
+							<p>Zu allererst zeige ich euch das Ergebnis im Browser und anschließend zeige ich ein
+								wenig Code, damit sich auch diejenigen ein Bild von Programmierung machen können,
+								die bisher noch keine Zeile Code programmiert haben.</p>
+							<p>Hier seht ihr eine Todo-Liste. Es gibt ein Textfeld und ein Button um eine Aufgabe
+								hinzuzufügen. Hierzu überfliegen wir kurz den HTML-Code dafür.<emph>Code
+									zeigen</emph><br>
+								Im Kopfteil wird ein Style-Sheet, das sogenannte CSS, geladen, im Hauptteil ist steht
+								der struktureller
+								Aufbau des Inhaltes auf der Seite. Am Ende haben wir noch einen Java-Script-Teil, der
+								eine Aufgabe entfernt.
+							</p>
+							<p>Im groben und ganzem kann man dies als das Frontend zusammenfassen.
+								<emph>Browser zeigen</emph></p>
+							<p>Damit diese Seite auch das macht, was sie machen soll, kommuniziert sie mit dem
+								sogenanten Backend. Als Beispiel tragen wir als Aufgaben "Müll rausbringen ein". Ein
+								Klick auf den Button übermittelt nun eine Anfrage mit Daten
+								an den Server. <emph>"Müll rausbringen eintippen" und Controller-Code zeigen</emph></p>
+							<p>
+								Der Server benutzt diese Anfrage nun und übergibt eine neu generierte Seite an den
+								Browser. <emp>Browser zeigen und Button klicken</emp>
+							</p>
+							<p>
+								Es taucht nun die Aufgabe in der Liste auf. Füge ich noch eine Aufgabe hinzu, "z.B.
+								mit dem Hund Gassi gehen", dann hat der Server sich nun diese zwei Aufgaben
+								"gemerkt". Ein Klick auf den Button "Entfernen" führt wieder eine Anfrage an den
+								Server aus.
+							</p>
+							<p>Diese Aufgaben im Frontend und im Backend machen dann zwei oder mehrere Personen und
+								der Fullstack-Entwickler übernimmt beide Aufgaben. Das Thema Datenbank käme dann
+								auch noch hinzu und ist in meinem Beispiel nicht implementiert. Würde ich den Server
+							neu starten, dann währen die Daten weg.</p>
+						</aside>
 					</section>
 
 					<section>
@@ -69,11 +167,84 @@
 						<div class="two-columns">
 							<ul>
 								<li>Web-Server</li>
-								<li>Versionskontrolle</li>
+								<li>Agile-Development</li>
+								<li>CI / CD</li>
 								<li>Build-Tool</li>
-								<li>Unit-Tests</li>
+								<li>Tests</li>
+								<li>Versionskontrolle</li>
 							</ul>
 						</div>
+
+						<aside class="notes">
+							<p>Für einen - ich sag jetzt mal - "kompletten" Full-Stack-Developer reichen Frontend
+								und Backend alleine nicht aus. Er muss sich auch mit folgenden Themen Beschäftigen</p>
+							<ul>
+								<li>Web-Server - damit er weiß wie diesen für sein Programm anpassen muss</li>
+								<li>Agile Development und Continious Integration bzw. Continious Delivery - da
+									Entwicklungszyklen immer kürzer werden und Änderungen bereits früh ausgeliefert
+								werden</li>
+								<li>Build-Tools - für das automatische Einbindung von Abhängigkeiten und das
+									Ausliefern als Pakete</li>
+								<li>Tests und Versionskontrolle</li>
+							</ul>
+							<p>
+								Für die letzten beiden Punkte zeige ich euch ein Beispiel, damit man sich etwas
+								darunter vorstellen kann. Übrigens werde ich auf diesem Kanal alle Punkte, die ich
+								hier erwähne, in zukünftigen Videos im Detail behandeln. <emph>Tests in IntelliJ
+								zeigen</emph>
+							</p>
+							<p>
+								Hier haben wie zwei Tests. Beim ersten Test wird geprüft, ob die Aufgabe "Task 1" in
+								der Liste auftaucht, wenn ich die entsprechende Funktion dafür benutze.<br>
+								Mit Hilfe dieses Tests habe ich herausgefunden, dass der Code, wie ich ihn aus dem
+								Buch kopiert habe nicht mehr funktioniert. Die Funktion konnte nämlich keine neuen
+								Aufgaben hinzufügen, wenn die Liste zuvor leer war. Also musste ich den Code
+								erweitern. <emph>Zeige entsprechende Zeile</emph> Die Variable, die mir die ID-Nummer
+								der letzten Aufgabe geben soll, war früher bei einer leeren Liste vordefiniert. In
+								der aktuellen Version tritt ein Fehler auf, den ich abfangen musste.
+							</p>
+							<p>
+								Sowas passiert ständig. Deswegen ist es extrem wichtig im ganzem Entwicklungsprozess
+								diese Tests durchzuführen, um zu gewährleisten, dass der bereits erstellte Code immer
+								noch das tut, was er tun soll. <br>
+								Leider gibt es viele, die denken Tests sind Zeitverschwendung. Bspw. sagt mir mal
+								jemand: "Für Tests zahlt keine Kunde". Dabei sollte es eigentlich heißen, keine Kunde
+								zahlt für ein Programm ohne Tests. Denn je größer ein Projekt wird, welches keine
+								Tests hat, umso schwieriger wird es dieses zu warten und umso mehr Zeit und Geld muss
+								man für die Weiterentwicklung. Die Qualität ist dementsprechend auch miserabel.
+							</p>
+							<p>
+								Solltet ihr als mal in einer Firma oder Team sein, die Tests für unnötig hält,...
+								Dann lauft! So schnell ihr könnt. Irgendwann kommt man nämlich an einem Punkt, wo das
+								Projekt nicht mehr vorankommt und Entwickler, Chefs und Kunden durchdrehen.
+							</p>
+							<p>
+								Der zweite Tests übrigens, prüft ob sich die Menge einer Liste um eins vermindert,
+								wenn man die erste Aufgabe entfernt.
+							</p>
+							<p>
+								Zum Thema Versionskontrolle möchte ich mich auch kurz fassen und das wesentliche
+								erklären: Damit möchte man quasi die unterschiedlichen Entwicklungsstände
+								abspeichern. Während man am Code arbeitet, ist dieser in der Regel nicht
+								kompilierbar. Hat man aber nun schon mehrere Stunden oder Tage an seinem Code
+								gearbeitet und man soll sich umgehend um ein dringendes Problem kümmern, so wäre es
+								furchtbar, müsste man alle Änderungen zurücknehmen bis der Code wieder kompiliert.
+								<em>Git Log zeigen, erwähnen schlechtes Beispiel</em>
+								Also erstellt man eine sogenannte Branch, zu deutsch Zweig, und macht dann auf ihr
+								seine Änderungen. Sollte nun solch dringender Fall auftreten, checkt man die letzte
+								kompilierbare Version aus und kümmert sich um die Problemlösung. Dann wird das ganze
+								committed und gepusht, das nennt man halt so. Danach kann man sich wieder seiner
+								alten Aufgabe widmen und kehr auf seine "Branch" zurück.
+							</p>
+							<p>
+								Diese Branch wieder dann mit der letzten kompilierbaren Version "verbunden". Das bennt
+								man dann "Merge". Das Programm ist nun erweitert worder und befindet sich in einem
+								ausführbarem Zustand. In der Regel macht man für jede Anforderung eine neue Branch,
+								die man dann wieder zusammenfügt. Dann ist auch wieder wichtig, dass die Tests
+								geschrieben und alle erfüllt wurden. Schließlich wurde ja Code geändert und man muss
+								ja irgendwie sicher sein, dass der Code noch immer tut, was er tun soll.
+							</p>
+						</aside>
 					</section>
 
 					<section>
@@ -84,24 +255,58 @@
 							<li><strong>Django</strong> - Python Web Framework</li>
 							<li><strong>Ruby on Rails</strong></li>
 						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Full-Stack ist nicht gleich Full-Stack</li>
+								<li>Hier sieht ihr eine List von häufigen Stacks</li>
+								<li>Stacks sind kombinierbar</li>
+							</ul>
+						</aside>
+
 					</section>
 
-				</section>
-
-				<section id="play">
 					<section>
-						<h3>Play Framework</h3>
-						<p>
-							<a href="https://www.playframework.com/" target="_blank">
-								<img alt="PlayFramework" src="https://www.playframework.com/assets/images/logos/e48e23590262d1b8f97257485c866c26-play_reverse.png" width="300px"/>
-							</a>
-						</p>
+
+						<div class="two-columns">
+							<div>
+								<h5>Vorteile</h5>
+								<ul>
+									<li>generell günstiger</li>
+									<li>weniger Kommunikation nötig</li>
+									<li>einheitlicher Stil</li>
+									<li>Entwicklungszyklus ist schneller</li>
+									<li>Einsatz in Front-End oder Back-End</li>
+								</ul>
+							</div>
+							<div>
+								<h5>Nachteile</h5>
+								<ul>
+									<li>generell kein Expertenwissen</li>
+									<li>Spezialisierung bei großen Projekten sinnvol</li>
+									<li>Abhängigkeit von einem oder wenigen Entwicklern</li>
+								</ul>
+							</div>
+						</div>
+
+						<aside class="notes">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</aside>
+
 					</section>
+
 				</section>
+
+
 
 				<section id="programming basics">
 					<section>
-						<h3>Mit welcher Programmiersprache lernt man am besten zuerst?</h3>
+						<h3>Was ist die beste Programmiersprache um das Programmieren zu lernen?</h3>
 						<p class="fragment">
 							<span style="color: #1b91ff">Das ist so ziemlich egal</span>
 						</p>
@@ -113,7 +318,7 @@
 					</section>
 
 					<section>
-						<h3>Hello World in 5 Programmiersprachen</h3>
+						<h3>"Hello World!" in 5 Programmier sprachen</h3>
 						<ul>
 							<li>Scala</li>
 							<li>Java</li>
