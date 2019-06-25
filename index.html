@@ -38,20 +38,26 @@
 					<img src="img/ProfilfotoSmall.JPG" width="300" alt="Profilfoto" />
 
 					<aside class="notes">
-						<p>Herzlich willkommen zum ersten Video von fullstackdevelopment.de. Auf diesem Kanal geht es
-								  um das Thema Full-Stack-Development und möchte sich sowohl an erfahrene
-							Programmierer sowie Programmieranfänger. Viele Kollegen behaupten Anfänger sollten lieber
-							erst mal eine Programmiersprache beherrschen und sich dann erst an fortgeschrittene
-							Themen wagen, das sehe ich aber nicht so. Auf diesem Kanal jedoch sollen Anfänger sämtliche Grundlagen finden und weitestgehend früh an das Thema herangeführt werden. Fortgeschrittene dagegen überspringen einfach die Grundlagen.
+						<p>Herzlich willkommen zum ersten Video von fullstackdevelopment.de.
+							Dies ist das erste Video einer Tutorial-Serie, die Programmieranfängern das Thema
+							Full-Stack-Development näher bringen soll.
+							<br>Ich werde dabei alles nötige Wissen vermitteln ohne zu sehr ins Detail zu gehen.
+							Vertiefen werde ich die einzelnen Themen dann in einem späterem Tutorial. In dieser Serie
+							möchte hier so
+							schnell wie möglich ein komplettes Webprojekt abbilden, damit ihr von Anfang an die
+							wichtigsten Aspekte der Webprogrammierung kennenlernt. Somit müsst ihr nicht erst ewig
+							lange Tutorials machen bzw. einen Haufen Fachbücher lesen um eine Webanwendung schreiben
+							zu können.
+							<br>Also beginnen wir doch gleich mit der ersten Frage: Was ist Full-Stack-Development
 						</p>
 					</aside>
 				</section>
 
 				<section id="intro">
 					<section>
-						<h3>Was bedeutet Full-Stack?</h3>
+						<h3>Was bedeutet Full-Stack-Development?</h3>
 						<div class="two-columns">
-							<div>
+							<div style="border: aqua 1px solid; padding: 10px">
 								<h5>Front-End</h5>
 								<ul>
 									<li>HTML</li>
@@ -60,16 +66,16 @@
 									<li>...</li>
 								</ul>
 							</div>
-							<div class="two-columns">
+							<div class="two-columns" style="border: orange 1px solid; padding: 10px">
 								<div><h5>Back-End</h5>
-								<ul>
+								<ul style="padding: 10px">
 									<li>Scala</li>
 									<li>SBT</li>
 									<li>PlayFramework</li>
 									<li>...</li>
 								</ul>
 								</div>
-								<div>
+								<div style="border: #aa2233 2px dashed; padding: 10px">
 								<h5>Datenbank</h5>
 								<ul>
 									<li>MySQL</li>
@@ -81,24 +87,26 @@
 
 						<aside class="notes">
 							<p>
-								Ein Full-Stack-Developer ist nicht klar definiert, ist jedoch ein aktuelles Buzzword. In
-								der Regel meint man damit einen Webentwickler, der sowohl Frontend als auch Backend
-								entwickelt. Dabei spricht man beim Frontend über all das, was im Browser
+								In der IT hört man diesen Begriff immer häufiger, den man jedoch leider nicht konkret
+								definiert hat.
+								In der Regel meint man mit Fullstack-Developer einen Webentwickler, der
+								sowohl am Frontend als auch	am Backend arbeitet.
+								Dabei spricht man beim Frontend über
+								all das, was im Browser
 								passiert, und beim Backend, was auf dem Server passiert. Bisher hat man Aufgaben
-								in diesen Bereichen auf
-								unterschiedliche Personen
-								verteilt. Im Backend teilweise sogar die Entwicklung auf der Datenbank auf einen oder
-								mehreren Entwickler verteilt.
+								in diesen Bereichen auf	unterschiedliche Personen verteilt.
+								Im Backend wird teilweise sogar die Entwicklung der Datenbank auf einen
+								oder mehrere Entwickler aufgeteilt.
 							</p>
 							<p>
 								Jetzt seht ihr auf der Folie noch ein paar Punkte stehen, mit denen
-								Programmierneulinge erst mal gar nichts anfangen können. Andere YouTube-Videos zu
-								Full-Stack-Development zeigen oft "Die und die Technologien müsst ihr lernen, um
-								Full-Stack-Developer zu sein". Meine Punkte sind auch nur ein Beispiel eines
-								Full-Stacks. Da gibt es ganz viele Möglichkeiten.
+								Programmierneulinge erst mal gar nichts anfangen können. In anderen YouTube-Videos zu
+								Full-Stack-Development hört man oft "Die und die Technologien müsst ihr lernen, um
+								Full-Stack-Developer zu sein". Meine Punkte hier sind auch nur ein Beispiel eines
+								Full-Stacks. Da gibt es ganz viele Möglichkeiten, dazu später mehr.
 							</p>
 							<p>
-								Damit ihr aber ein besseres Bild davon habt, was Frontend und Backend ist, erkläre
+								Damit ihr aber jeder ein besseres Bild davon habt, was Frontend und Backend ist, erkläre
 								ich das an einem kleinen Beispiel.
 							</p>
 						</aside>
@@ -114,51 +122,40 @@
 
 						<aside class="notes">
 							<p>
-								Dazu habe ich aus einem Buch ein kleines Tutorial aus einem Buch über das
-								PlayFramework implementiert.
+								Dazu habe ich kleines Tutorial aus einem Buch über das
+								PlayFramework implementiert, dass ich euch zeigen möchte.
 							</p>
-							<ul>
-								<li>Play ist cool und ist eine Framework, dass ich für meine Abschlussarbeit
-									benutzt habe</li>
-								<li>Was ein Framework ist, werde ich jetzt nicht im Detail erklären, da dieses Video
-									ja nur eine Einführung ist.<br>
-									Zusammengefasst und extrem simpel formuliert, ist ein Framework eine fertige
-									Struktur mit jeder Menge vordefiniertem Code, das einem Programmierer viel Arbeit
-									abnimmt.
-								</li>
-							</ul>
-
 							<p>Zu allererst zeige ich euch das Ergebnis im Browser und anschließend zeige ich ein
-								wenig Code, damit sich auch diejenigen ein Bild von Programmierung machen können,
-								die bisher noch keine Zeile Code programmiert haben.</p>
+								wenig Code in meiner Entwicklungsumgebung, damit auch jene, die noch nie eine Zeile
+								Code geschrieben haben, mal sehen, was hinter einem Programm steckt.
+								.<b>Browser zeigen</b></p>
 							<p>Hier seht ihr eine Todo-Liste. Es gibt ein Textfeld und ein Button um eine Aufgabe
-								hinzuzufügen. Hierzu überfliegen wir kurz den HTML-Code dafür.<emph>Code
-									zeigen</emph><br>
-								Im Kopfteil wird ein Style-Sheet, das sogenannte CSS, geladen, im Hauptteil ist steht
-								der struktureller
-								Aufbau des Inhaltes auf der Seite. Am Ende haben wir noch einen Java-Script-Teil, der
-								eine Aufgabe entfernt.
+								hinzuzufügen. Hierzu überfliegen wir kurz den Code dafür.<b>Code
+									zeigen</b><br>
+								<b>Frei sprechen, kurz halten</b>
 							</p>
-							<p>Im groben und ganzem kann man dies als das Frontend zusammenfassen.
-								<emph>Browser zeigen</emph></p>
+							<p>Im Groben und Ganzem kann man dies als das Frontend zusammenfassen.
+								<b>Browser zeigen</b></p>
 							<p>Damit diese Seite auch das macht, was sie machen soll, kommuniziert sie mit dem
 								sogenanten Backend. Als Beispiel tragen wir als Aufgaben "Müll rausbringen ein". Ein
 								Klick auf den Button übermittelt nun eine Anfrage mit Daten
 								an den Server. <emph>"Müll rausbringen eintippen" und Controller-Code zeigen</emph></p>
 							<p>
 								Der Server benutzt diese Anfrage nun und übergibt eine neu generierte Seite an den
-								Browser. <emp>Browser zeigen und Button klicken</emp>
+								Browser. <emph>Browser zeigen und Button klicken</emph>
 							</p>
 							<p>
-								Es taucht nun die Aufgabe in der Liste auf. Füge ich noch eine Aufgabe hinzu, "z.B.
+								Nun die Aufgabe in der Liste auf. Füge ich noch eine Aufgabe hinzu, "z.B.
 								mit dem Hund Gassi gehen", dann hat der Server sich nun diese zwei Aufgaben
 								"gemerkt". Ein Klick auf den Button "Entfernen" führt wieder eine Anfrage an den
 								Server aus.
 							</p>
-							<p>Diese Aufgaben im Frontend und im Backend machen dann zwei oder mehrere Personen und
-								der Fullstack-Entwickler übernimmt beide Aufgaben. Das Thema Datenbank käme dann
-								auch noch hinzu und ist in meinem Beispiel nicht implementiert. Würde ich den Server
-							neu starten, dann währen die Daten weg.</p>
+							<p>Diese Aufgaben im Frontend und im Backend machen in der Regel dann zwei oder mehrere
+								Personen und der Fullstack-Entwickler übernimmt beide Aufgaben.
+								Würde ich allerdings den Server neu starten, dann
+								wären die Daten weg.
+								Deshalbe müsste man noch eine Datenbank implementieren, aber ich
+								will es	ja nicht gleich im ersten Video übertreiben. </p>
 						</aside>
 					</section>
 
@@ -204,19 +201,21 @@
 								der aktuellen Version tritt ein Fehler auf, den ich abfangen musste.
 							</p>
 							<p>
-								Sowas passiert ständig. Deswegen ist es extrem wichtig im ganzem Entwicklungsprozess
+								So Sachen passieren ständig. Deswegen ist es extrem wichtig im ganzem
+								Entwicklungsprozess
 								diese Tests durchzuführen, um zu gewährleisten, dass der bereits erstellte Code immer
 								noch das tut, was er tun soll. <br>
-								Leider gibt es viele, die denken Tests sind Zeitverschwendung. Bspw. sagt mir mal
+								Leider gibt es viele, die denken Tests sind Zeitverschwendung. Bspw. sagte mir mal
 								jemand: "Für Tests zahlt keine Kunde". Dabei sollte es eigentlich heißen, keine Kunde
-								zahlt für ein Programm ohne Tests. Denn je größer ein Projekt wird, welches keine
+								zahlt für eine Software ohne Tests. Denn je größer ein Projekt wird, welches keine
 								Tests hat, umso schwieriger wird es dieses zu warten und umso mehr Zeit und Geld muss
-								man für die Weiterentwicklung. Die Qualität ist dementsprechend auch miserabel.
+								man für die Weiterentwicklung reinstecken. Die Qualität vom Code ist dementsprechend
+								auch miserabel.
 							</p>
 							<p>
 								Solltet ihr als mal in einer Firma oder Team sein, die Tests für unnötig hält,...
 								Dann lauft! So schnell ihr könnt. Irgendwann kommt man nämlich an einem Punkt, wo das
-								Projekt nicht mehr vorankommt und Entwickler, Chefs und Kunden durchdrehen.
+								Projekt nicht mehr vorankommt und Entwickler, Chefs und Kunden drehen durch.
 							</p>
 							<p>
 								Der zweite Tests übrigens, prüft ob sich die Menge einer Liste um eins vermindert,
@@ -226,23 +225,26 @@
 								Zum Thema Versionskontrolle möchte ich mich auch kurz fassen und das wesentliche
 								erklären: Damit möchte man quasi die unterschiedlichen Entwicklungsstände
 								abspeichern. Während man am Code arbeitet, ist dieser in der Regel nicht
-								kompilierbar. Hat man aber nun schon mehrere Stunden oder Tage an seinem Code
+								kompilierbar. Man würde also nicht die Seite im Browser sehen, wie ich sie vorhin
+								gezeigt habe. Hat man aber nun schon mehrere Stunden oder Tage	an seinem Code
 								gearbeitet und man soll sich umgehend um ein dringendes Problem kümmern, so wäre es
-								furchtbar, müsste man alle Änderungen zurücknehmen bis der Code wieder kompiliert.
-								<em>Git Log zeigen, erwähnen schlechtes Beispiel</em>
+								katasrophal, müsste man alle Änderungen zurücknehmen bis der Code wieder kompiliert.
+								<em>Git Log zeigen</em>
 								Also erstellt man eine sogenannte Branch, zu deutsch Zweig, und macht dann auf ihr
 								seine Änderungen. Sollte nun solch dringender Fall auftreten, checkt man die letzte
 								kompilierbare Version aus und kümmert sich um die Problemlösung. Dann wird das ganze
 								committed und gepusht, das nennt man halt so. Danach kann man sich wieder seiner
-								alten Aufgabe widmen und kehr auf seine "Branch" zurück.
+								alten Aufgabe widmen und kehrt auf seine "Branch" zurück.
 							</p>
 							<p>
-								Diese Branch wieder dann mit der letzten kompilierbaren Version "verbunden". Das bennt
-								man dann "Merge". Das Programm ist nun erweitert worder und befindet sich in einem
+								Diese Branch wird dann wieder mit der letzten kompilierbaren Version "verbunden". Das
+								nennt
+								man dann "Merge". Das Programm ist nun erweitert worden und befindet sich in einem
 								ausführbarem Zustand. In der Regel macht man für jede Anforderung eine neue Branch,
 								die man dann wieder zusammenfügt. Dann ist auch wieder wichtig, dass die Tests
 								geschrieben und alle erfüllt wurden. Schließlich wurde ja Code geändert und man muss
 								ja irgendwie sicher sein, dass der Code noch immer tut, was er tun soll.
+								Das ganze ist natürlich noch viel wichtiger, wenn man im Team arbeitet.
 							</p>
 						</aside>
 					</section>
@@ -259,15 +261,16 @@
 						<aside class="notes">
 							<p>
 								Stack ist nicht gleich Stacks. Auf dieser Folie stehen ein paar Beispiele von
-								gängigen Stacks. Damit möchte ich nur sagen, dass es verschiedene Möglichkeiten gibt
+								gängigen Stacks. Damit möchte ich eigentlich auch nur sagen, dass es verschiedene
+								Möglichkeiten gibt
 								Technologien zu kombinieren. Stack bedeutet nämlich genau das. Ein Stapel an
 								Technologien für die ganze Bandbreite der Webentwicklung.
 							</p>
 							<p>
-								Es ist übrigens auch möglich Stacks zu kombinieren. Beispielsweise als
+								Es ist übrigens auch möglich verschiedene Stacks zu kombinieren. Beispielsweise als
 								Micro-Services. Dabei teilt man ein größeres Software-Projekt in mehrere
 								Teilprojekte. Für jedes kann einen eigenen Stack benutzen und mit den anderen über
-								eine REST-Schnittstelle kommunizieren lassen. Micro-Services ist übrigens auch ein
+								eine REST-Schnittstelle kommunizieren zu lassen. Micro-Services ist übrigens auch ein
 								Buzzword, nach dem in letzter Zeit immer mehr gefragt wird. Auch dazu möchte in
 								Zukunft ein Video machen
 							</p>
@@ -310,9 +313,12 @@
 								Wissen besteht der Bedarf an Experten.
 							</p>
 							<p>
-								Im nächsten Video zeige ich, mit welcher Programmiersprache man als Anfänger beginnen
+								Nun habt ihr einen kleinen Einblick in dem Alltag eines Fullstack-Developers gesehen.
+								Im nächsten Video stellen wir uns der Frage, mit
+								welcher Programmiersprache man als Anfänger beginnen
 								sollte, wenn man den Weg des Fullstack-Developers gehen möchte. <emph>nächste
 								Folie</emph>
+								Vielen Dank für's zuschauen. Wir sehen uns dann im nächstem Video.
 							</p>
 						</aside>
 
@@ -324,19 +330,30 @@
 
 				<section id="programming basics">
 					<section>
-						<h3>Was ist die beste Programmiersprache um das Programmieren zu lernen?</h3>
+						<h3>Welche Programmiersprache ist die beste, um das Programmieren zu lernen?</h3>
 						<p class="fragment">
-							<span style="color: #1b91ff">Das ist so ziemlich egal</span>
+							<span style="color: #1b91ff">Eigentlich egal</span>
 						</p>
 						<aside class="notes">
-							Programmiersprache nicht wichtig, sondern das Programmieren an sich<br>
-							Am besten man hat 5 Programmiersprachen gelernt<br>
-							Ich stelle ein paar verschiedene vor, benutze sie abwechselnd und zeige dann die Lösung in mehreren Programmiersprachen
+							Willkommen zum zweiten Video meiner Tutorial-Serie. Hier zeige ich euch welche
+							Programmiersprache am besten für Full-Stack-Development geeignet ist und behandle die
+							fundementalsten Grundlagen der Programmierung.<br>
+							Was ist nun die beste Programmiersprache um das Programmieren zu lernen? <b>next
+							fragment</b>
+							Es ist eigentlich egal mit welcher Programmiersprache man anfängt. Wichtig ist das
+							Programmieren an sich zu lernen und die Sprache ist da relativ nebensächlich. Wie bei
+							einem Buchauthor. Es spielt keine Rolle wie gut er Englisch, Deutsch oder Französisch
+							kann, sondern wie gut er ein Buch schreiben kann.<br>
+							Außerdem kommt man mit einer einzigen Programmiersprache nicht weit. Man sagt, dass man
+							am besten 5 Programmiersprachen können sollte. Es gibt sogar Empfehlungen alle ein zwei
+							Jahre eine neue Sprache zu lernen, was auch zu einer Verbesserung der
+							Programmierfähigkeiten führen soll, die man schon beherrscht. Viele Programmiersprachen
+							sind in ihrer Syntax auch sehr ähnlich. <b>next slide</b>
 						</aside>
 					</section>
 
 					<section>
-						<h3>"Hello World!" in 5 Programmier sprachen</h3>
+						<h3>"Hello World!" in 5 Programmiersprachen</h3>
 						<ul>
 							<li>Scala</li>
 							<li>Java</li>
@@ -345,21 +362,31 @@
 							<li>Python</li>
 						</ul>
 						<aside class="notes">
-
+							Und genau das werde ich jetzt vorführen in dem ich 5 verschiedene Programmiersprachen
+							vorstelle. Auf den nächsten Folien auf denen ich die wichtigsten Grundlagen vermitteln
+							werde, werde ich ständig die Programmiersprache ändern und am Ende die
+							Programmiersprachen vergleichen.<br>
+							Beginnen wir mit der Tradition ein "Hello World" zu schreiben. Dazu zeige ich euch
+							verschiedene Webseiten, wo man den Code schreiben kann, ohne etwas auf seinen Rechner
+							installieren zum müssen.
 						</aside>
 					</section>
 
 					<section>
 						<h3>Variablen und Datentypen</h3>
+						<pre><code data-trim>
+							// Scala oder Kotlin
+							val x: Int = 4
+						</code></pre>
 
 						<aside class="notes">
-
+							Scala
 						</aside>
 					</section>
 
 					<section>
 						<h3>Kontrollstrukturen und Konditionen</h3>
-
+							JavaScript
 						<aside class="notes">
 
 						</aside>
@@ -367,7 +394,7 @@
 
 					<section>
 						<h3>Schleifen</h3>
-
+							Python
 						<aside class="notes">
 
 						</aside>
@@ -375,7 +402,7 @@
 
 					<section>
 						<h3>Funktionen</h3>
-
+							Kotlin
 						<aside class="notes">
 
 						</aside>
@@ -385,15 +412,27 @@
 						<h3>Klassen und Objekte</h3>
 
 						<aside class="notes">
-
+							Java
 						</aside>
 					</section>
 
 					<section>
-						<h3>Klassen und Objekte</h3>
-
+						<h3>"Hello World!" in 5 Programmiersprachen</h3>
+						<ul>
+							<li>Scala</li>
+							<li>Java</li>
+							<li>Kotlin</li>
+							<li>JavaScript</li>
+							<li>Python</li>
+						</ul>
 						<aside class="notes">
-
+							Und genau das werde ich jetzt vorführen in dem ich 5 verschiedene Programmiersprachen
+							vorstelle. Auf den nächsten Folien auf denen ich die wichtigsten Grundlagen vermitteln
+							werde, werde ich ständig die Programmiersprache ändern und am Ende die
+							Programmiersprachen vergleichen.<br>
+							Beginnen wir mit der Tradition ein "Hello World" zu schreiben. Dazu zeige ich euch
+							verschiedene Webseiten, wo man den Code schreiben kann, ohne etwas auf seinen Rechner
+							installieren zum müssen.
 						</aside>
 					</section>
 
@@ -611,6 +650,8 @@
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/markdown/marked.js'},
+					{ src: 'plugin/markdown/markdown.js'},
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				],
