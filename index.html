@@ -353,56 +353,132 @@
 					</section>
 
 					<section>
-						<h3>"Hello World!" in 5 Programmiersprachen</h3>
+						<h3>Programmiergrundlagen in 5 Programmiersprachen</h3>
 						<ul>
 							<li>Scala</li>
-							<li>Java</li>
-							<li>Kotlin</li>
 							<li>JavaScript</li>
 							<li>Python</li>
+							<li>Kotlin</li>
+							<li>Java</li>
 						</ul>
 						<aside class="notes">
 							Und genau das werde ich jetzt vorführen in dem ich 5 verschiedene Programmiersprachen
-							vorstelle. Auf den nächsten Folien auf denen ich die wichtigsten Grundlagen vermitteln
+							vorstelle. Auf den nächsten Folien auf denen ich die fundamentalsten Grundlagen vermitteln
 							werde, werde ich ständig die Programmiersprache ändern und am Ende die
 							Programmiersprachen vergleichen.<br>
-							Beginnen wir mit der Tradition ein "Hello World" zu schreiben. Dazu zeige ich euch
-							verschiedene Webseiten, wo man den Code schreiben kann, ohne etwas auf seinen Rechner
-							installieren zum müssen.
+							Beginnen wir mit Scala und das Thema Variablen und primitive Datentypen
 						</aside>
 					</section>
 
 					<section>
-						<h3>Variablen und Datentypen</h3>
-						<pre><code data-trim>
-							// Scala oder Kotlin
-							val x: Int = 4
+						<h3>Variablen und primitive Datentypen</h3>
+						<a href="https://scalafiddle.io/">https://scalafiddle.io/</a>
+						<pre class="fragment "><code data-trim>
+							// Scala
+
+							// immutable / unverändliche Variablen
+							val pi = 3.14
+							// mutable / veränderliche Varliaben
+							var count = 0
+							count += 1
+
+							val a: Int = 1
+							val x: Double = 1.05
+							val text: String = "Hello World!"
 						</code></pre>
 
 						<aside class="notes">
-							Scala
+							Es gibt zwei Arten von Variablen. Unveränderliche und veränderliche. Als Beispiel nehmen
+							wir hier den Wert pi als unveränderliche Variable.<br>
+							Und als veränderliche Variable nehmen wie einen Zähler count. Ein Zähler ändert sich mich
+							jedem Durchlauf, somit muss man dieser Variablen einen neuen Wert zuweisen können. Pi
+							dagegen, sollte sich niemals verändern. <br>
+							Heutzutage ist man der Meinung es sei am besten, eine Variable immer als unveränderlich
+							zu deklarieren, wenn man sich nicht sicher ist, ob sie verändert werden soll. Das erspart
+							einem mögliche Konflikte im Laufe des Entwicklungsprozesses.<br>
+							Dann gibt es die primitiven Datentypen. Die drei am häufigsten benutzten sind Integer,
+							Double und String. Zu deutsch; eine Ganzzahl, eine reelle Zahl und eine Zeichenkette.<br>
+							Übringes, diese grünen Zeilen nennt man übrigens Kommentare. Diese benutzt man dazu seinen
+							Code	in
+							einer natürlichen Sprache zu beschreiben. Dieser doppelte Schrägstrich sagt dem Computer,
+							dass er diese Zeile ignorieren soll. Das kann man auch machen, wenn man nicht möchte,
+							dass Code ausgeführt wird.
 						</aside>
 					</section>
 
 					<section>
 						<h3>Kontrollstrukturen und Konditionen</h3>
-							JavaScript
-						<aside class="notes">
+						<h5 class="highlight-blue">DevTools mit F12</h5>
+						<pre class="fragment "><code data-trim>
+							var alter = 17
 
+							if (alter >= 18)
+							  console.log("Du darfst in Deutschland wählen")
+							else
+							  console.log("Du bist noch nicht wahlberechtigt")
+
+							alter += 1
+							console.log("Du hattest Geburstag und bist nun " + alter + "alt")
+
+							if (alter >= 18)
+							  console.log("Du darfst in Deutschland wählen")
+							else
+							  console.log("Du bist noch nicht wahlberechtigt")
+						</code></pre>
+						<aside class="notes">
+							Als nächstes kommen wir zu JavaScript und dem Thema Kontrollstrukturen und Konditionen.
+							Dazu braucht man weder etwas installieren oder auf eine Webseite gehen. Dazu drückt man
+							einfach F12 in seinem Browser und man kommt in die DevTools. Hier gibt es einen Reiter
+							Console und dort kann man nun JavaScript eingeben.<br>
+							Eine kurze Erläuterungen, was man mit Kontrollstrukturen meint; immer wenn man ein
+							bestimmtes Ereignis hat und möchte, dass sich das Programm dementsprechend verhält,
+							benutzt man Kontrollstrukturen. Man könnte auch einfach von Wenn-Dann-Regeln sprechen.
+							Also immer wenn Ereignis A eintritt dann führe Aktion B aus. Ich zeige das nun am
+							Beispiel, ob jemand wahlberechtigt ist.
+							<b>Freisprechen</b>
 						</aside>
 					</section>
 
 					<section>
 						<h3>Schleifen</h3>
-							Python
-						<aside class="notes">
+						<a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a>
+						<pre class="fragment"><code data-trim>
+							i = 0
+							while i < 10:
+							  print(i)
+							  i += 1
 
+							for i in range(10):
+							  print(i)
+						</code></pre>
+						<aside class="notes">
+							Die nächste Programmiersprache ist Python und es geht um das Thema Schleifen. Dazu gehe
+							ich auf die Webseite "repl.it". Auf der Seite kann man Code auch ganz vielen anderen
+							Sprachen schreiben.<br>
+							Schleifen benutzt man immer dann, wenn man etwas mehrfach ausführen möchte. Als
+							simples Beispiel
+							zeige ich Code, der die Zahlen 0 bis 9 hintereinander ausgibt.
 						</aside>
 					</section>
 
 					<section>
 						<h3>Funktionen</h3>
-							Kotlin
+						<a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a>
+						<pre class="fragment"><code data-trim>
+						fun main() {
+							greet("Lukas")
+							for (i in 2 until 10)
+								println("Das Quadrat von $i ist gleich: " + squared(i))
+						}
+
+						fun greet(name: String) {
+							println("Hallo " + name)
+						}
+
+						fun squared(x: Int): Int {
+							return x*x
+						}
+					</code></pre>
 						<aside class="notes">
 
 						</aside>
@@ -410,29 +486,23 @@
 
 					<section>
 						<h3>Klassen und Objekte</h3>
-
+						<a href="https://www.jdoodle.com/online-java-compiler">https://www.jdoodle.com/online-java-compiler</a>
 						<aside class="notes">
 							Java
 						</aside>
 					</section>
 
 					<section>
-						<h3>"Hello World!" in 5 Programmiersprachen</h3>
+						<h3>Unterschiede dieser 5 Programmiersprachen</h3>
 						<ul>
 							<li>Scala</li>
-							<li>Java</li>
-							<li>Kotlin</li>
 							<li>JavaScript</li>
 							<li>Python</li>
+							<li>Kotlin</li>
+							<li>Java</li>
 						</ul>
 						<aside class="notes">
-							Und genau das werde ich jetzt vorführen in dem ich 5 verschiedene Programmiersprachen
-							vorstelle. Auf den nächsten Folien auf denen ich die wichtigsten Grundlagen vermitteln
-							werde, werde ich ständig die Programmiersprache ändern und am Ende die
-							Programmiersprachen vergleichen.<br>
-							Beginnen wir mit der Tradition ein "Hello World" zu schreiben. Dazu zeige ich euch
-							verschiedene Webseiten, wo man den Code schreiben kann, ohne etwas auf seinen Rechner
-							installieren zum müssen.
+
 						</aside>
 					</section>
 
